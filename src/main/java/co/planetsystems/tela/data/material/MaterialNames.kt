@@ -1,0 +1,26 @@
+package co.planetsystems.tela.data.material
+
+object MaterialNames {
+    const val TABLE_NAME = "material"
+    const val PRIMARY_KEY = "id"
+    const val DATE_CREATED = "date_created"
+    const val DATE_UPDATED = "date_updated"
+    const val STATUS = "status"
+    const val APPROVED_STATUS = "approved_status"
+    const val CONFIRMATION = "confirmation"
+    const val COMMENT = "comment"
+    const val DATE_REQUIRED = "date_required"
+    const val DEPLOYMENT_SITE = "deployment_site"
+    const val DEPLOYMENT_SITE_ID = "deployment_site_id"
+    const val DEPLOYMENT_UNIT = "deployment_unit"
+    const val DEPLOYMENT_UNIT_ID = "unit_id"
+    const val EMPLOYEE = "employee"
+    const val EMPLOYEE_ID = "employee_id"
+    const val REQUEST_TYPE = "request_type"
+    const val ITEM_ID = "item_id"
+    const val ITEM_NAME = "item_name"
+    const val QUANTITY = "quantity"
+    const val REQUEST_DATE = "request_date"
+    const val APPROVAL = "approval"
+    const val IS_UPLOADED = "is_uploaded"
+}

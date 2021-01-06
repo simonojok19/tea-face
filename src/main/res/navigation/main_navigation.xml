@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="co.planetsystems.tela.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_select_method_fragement"
+            app:destination="@id/methodSelectorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_enrollFragment"
+            app:destination="@id/enrollFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="co.planetsystems.tela.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_main_fragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="co.planetsystems.tela.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_spash_to_home_fragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/employeeNumberClockInDialog"
+        android:name="co.planetsystems.tela.ui.clock.clock_in.EmployeeNumberClockInDialog"
+        android:label="EmployeeNumberClockInDialog"
+        tools:layout="@layout/passcode_clock_in_layout"/>
+    <fragment
+        android:id="@+id/methodSelectorFragment"
+        android:name="co.planetsystems.tela.ui.clock.MethodSelectorFragment"
+        android:label="fragment_method_selector"
+        tools:layout="@layout/fragment_method_selector" >
+        <action
+            android:id="@+id/action_methodSelectorFragment_to_faceActivity"
+            app:destination="@id/faceActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/faceActivity"
+        android:name="co.planetsystems.tela.ui.clock.face.FaceActivity"
+        android:label="FaceActivity"
+        tools:layout="@layout/activity_face">
+        <argument
+            android:name="action"
+            android:defaultValue="enroll"
+            app:argType="string" />
+        <argument
+            android:name="national_id"
+            app:argType="string" />
+
+    </activity>
+    <fragment
+        android:id="@+id/enrollFragment"
+        android:name="co.planetsystems.tela.ui.enrollment.EnrollFragment"
+        tools:layout="@layout/fragment_enroll"
+        android:label="EnrollFragment" >
+        <action
+            android:id="@+id/action_enrollFragment_to_faceActivity"
+            app:destination="@id/faceActivity" />
+
+        <argument
+            android:name="national_id"
+            android:defaultValue="0"/>
+    </fragment>
+</navigation>
