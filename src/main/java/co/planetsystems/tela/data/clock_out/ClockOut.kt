@@ -12,7 +12,7 @@ data class ClockOut(
         @ColumnInfo(name = ClockOutNames.REASON)
         var reason: String,
 
-        @ColumnInfo(name = ClockOutNames.FACE_PRINT)
+        @ColumnInfo(name = ClockOutNames.FINGER_PRINT)
         var fingerPrint: ByteArray,
 
         @ColumnInfo(name = ClockOutNames.FACE_PRINT)

@@ -1,4 +1,7 @@
 package co.planetsystems.tela.data.timeOnSite
 
-class TimeOnSiteDao {
+import androidx.room.Dao
+
+@Dao
+interface TimeOnSiteDao {
 }

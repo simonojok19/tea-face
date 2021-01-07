@@ -1,9 +1,9 @@
 package co.planetsystems.tela.data.timeOnTime
 
 
-object TimeOnTaskNames {
+object TimeOnNames {
     const val PRIMARY_KEY = "id"
-    const val TABLE_NAME = "time_on_task"
+    const val TABLE_NAME = "time_on"
     const val DATE_CREATED = "date_created"
     const val DATE_UPDATED = "date_uploaded"
     const val STATUS = "status"
